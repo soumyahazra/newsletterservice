@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "875faa42-1654-4d75-987a-a53333f63bb0",
+		"_postman_id": "afd9a446-9c4d-4dd4-b9e7-23f1708ebdaa",
 		"name": "Newsletter subscription service",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"subscriptionID\": \"\",\r\n\"subscriptionDate\": \"2019-03-31\"\r\n}"
+					"raw": "{\r\n\"subscriptionID\": \"soumya.bikash.hazra@gmail.com\"\r\n}"
 				},
 				"url": {
 					"raw": "localhost:8085/subscribe",
@@ -59,13 +59,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8085//issubscribed/soumya.hazz@gmail.com",
+					"raw": "localhost:8085/issubscribed/soumya.hazz@gmail.com",
 					"host": [
 						"localhost"
 					],
 					"port": "8085",
 					"path": [
-						"",
 						"issubscribed",
 						"soumya.hazz@gmail.com"
 					]
@@ -79,7 +78,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/subscribers/before/10-02-2019",
+					"raw": "http://localhost:8085/subscribers/before/10-01-2019",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,7 +87,7 @@
 					"path": [
 						"subscribers",
 						"before",
-						"10-02-2019"
+						"10-01-2019"
 					]
 				}
 			},
@@ -134,5 +133,6 @@
 			},
 			"response": []
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
