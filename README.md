@@ -28,7 +28,7 @@ mvn spring-boot:run
 
 ## Building and running the Docker Image
 
-This application can be run inside a docker image. Please follow the below steps to build and run the docker image:
+This application can be run inside a docker image. "Dockerfile" script has been added in the repository. Please follow the below steps to build and run the docker image:
 
 ```
 cd ~/newsletterservice
@@ -37,7 +37,7 @@ docker run -p 8085:8085 newsletter-app
 ```
 
 ```
-The app will start running at <http://localhost:8085>
+The app will start running at <http://localhost:8085> 
 ```
 
 ## API Details
