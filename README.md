@@ -26,7 +26,19 @@ git clone https://github.com/soumyahazra/newsletterservice.git
 mvn spring-boot:run
 ```
 
+## Building and running the Docker Image
+
+This application can be run inside a docker image. Please follow the below steps to build and run the docker image:
+
+```
+cd ~/newsletterservice
+docker build -f Dockerfile -t newsletter-app .
+docker run -p 8085:8085 newsletter-app
+```
+
+```
 The app will start running at <http://localhost:8085>
+```
 
 ## API Details
 
@@ -100,14 +112,6 @@ The controller functionalities are tested using @MockBean and MockMvc approach.
 **2. Integration Testing**
 Integration test has been done using the native features of Spring Boot.
 
-## Building Docker Image
-
-This application can be run inside a docker image. Please follow the below steps to build and run the docker image:
-
-```
-cd ~/newsletterservice
-docker build -f Dockerfile -t newsletter-app .
-docker run -p 8085:8085 newsletter-app
-```
-
-
+**3. Manual testing**
+A sample json request file (Newsletter.postman_collection.json) is available for testing all the Rest endpoints of the service. It can be imported into apps like postman and tested. 
+We can also use browsers and CURL to generate the test requests
