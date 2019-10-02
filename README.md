@@ -17,7 +17,7 @@ Spring Boot (2.1.8) and Spring MVC have been used to develop and expose the Rest
 **1. Clone the application**
 
 ```bash
-git clone 
+git clone https://github.com/soumyahazra/newsletterservice.git
 ```
 
 **2. Build and run the app**
