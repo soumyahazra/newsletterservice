@@ -23,6 +23,7 @@ git clone https://github.com/soumyahazra/newsletterservice.git
 **2. Build and run the app**
 
 ```bash
+mvn clean install
 mvn spring-boot:run
 ```
 
