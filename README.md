@@ -26,7 +26,7 @@ git clone https://github.com/soumyahazra/newsletterservice.git
 mvn spring-boot:run
 ```
 
-The app will start running at <http://localhost:8080>
+The app will start running at <http://localhost:8085>
 
 ## API Details
 
@@ -44,7 +44,7 @@ Note: The APIs can be tested using postman or any other rest client. A sample re
 
 ### /subscribers
 ```
-GET http://localhost:8080/subscribers
+GET http://localhost:8085/subscribers
 
 Response: HTTP 200
 Content: application/json
@@ -52,7 +52,7 @@ Content: application/json
 
 ### /issubscribed/{emailId}
 ```
-GET http://localhost:8080/issubscribed/soumya.hazz@gmail.com
+GET http://localhost:8085/issubscribed/soumya.hazz@gmail.com
 
 Response: HTTP 200 [404 in case of not found]
 Content: boolean
@@ -60,7 +60,7 @@ Content: boolean
 
 ### /subscribe
 ```
-POST http://localhost:8080/subscribe
+POST http://localhost:8085/subscribe
 accept: application/json
 Content-Type: application/json
 
@@ -74,7 +74,7 @@ Content: application/json
 
 ### /unsubscribe/{emailId}
 ```
-DELETE http://localhost:8080/unsubscribe/test.email@gmail.com
+DELETE http://localhost:8085/unsubscribe/test.email@gmail.com
 
 Response: HTTP 200 [404 in case the enmail id not already subscribed]
 Content: application/json
@@ -82,7 +82,7 @@ Content: application/json
 
 ### /subscribers/{operator}/{date}
 ```
-GET http://localhost:8080/subscribers/before/10-01-2019 / GET http://localhost:8080/subscribers/after/10-01-2019
+GET http://localhost:8085/subscribers/before/10-01-2019 / GET http://localhost:8085/subscribers/after/10-01-2019
 
 Response: 200
 Content: application/json
@@ -99,5 +99,15 @@ The controller functionalities are tested using @MockBean and MockMvc approach.
 
 **2. Integration Testing**
 Integration test has been done using the native features of Spring Boot.
+
+## Building Docker Image
+
+This application can be run inside a docker image. Please follow the below steps to build and run the docker image:
+
+```
+cd ~/newsletterservice
+docker build -f Dockerfile -t newsletter-app .
+docker run -p 8085:8085 newsletter-app
+```
 
 
